@@ -1,0 +1,26 @@
+package main
+
+import "fmt"
+
+func main() {
+	sabores := []string{"pepperoni","muçarela", "4 queijos", "marguerita","abacaxi"}
+	// adiciona valores de x a y, excluindo o y
+	fatia := sabores[0:2] // pepperoni e muçarela
+	fmt.Println(fatia)
+
+	fatia = sabores[1:4] // muçarela, 4 queijos, marguerita
+	fmt.Println(fatia)
+	// Acessa todas as posições
+	// fatia := sabores [:]
+
+	// desafio Surpresa
+	for i := 0; i < len(sabores); i++ {
+		fmt.Println(sabores[i])
+	}
+	// Delentando valores com o append
+	// Exemplo de valor deletado "4 queijos"
+	sabores = append(sabores[:2], sabores[3:]...)
+	/* for i := 0; i < len(sabores); i++ {
+		fmt.Println(sabores[i])
+	} */
+}
